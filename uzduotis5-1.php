@@ -7,8 +7,8 @@
 </head>
 <body>
     <?php 
-    $a = 3;
-    $b = 4;
+    $a = 5;
+    $b = 5;
     $c = 5;
     $tipas;
     $plotas;
@@ -24,9 +24,7 @@
     elseif ( $a == $b && $a == $c && $b == $c){
         $tipas = 'Lygiašonis';
     }
-    elseif ( $a == $b && $b !== $c && $a + $b > $c + 
-        '\n' || $a == $c && $a !== $b && $a + $c > $b  + 
-        '\n' || $b == $c && $b !== $a && $b + $c > $a ){
+    elseif ( $a == $b && $b !== $c && $a + $b > $c || $a == $c && $a !== $b && $a + $c > $b  || $b == $c && $b !== $a && $b + $c > $a ){
         $tipas = 'Lygiakraštis';
     }
     else {
