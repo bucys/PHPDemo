@@ -7,19 +7,29 @@
 </head>
 <body>
     <?php 
-    $a = 5;
-    $b = 5;
-    $c = 5;
+    $a = 4;
+    $b = 4;
+    $c = 4;
     $tipas;
     $plotas;
-    $perimetras = (($a + $b + $c) / 2);
+    $perimetras = (($a + $b + $c)) / 2;
     
-    if ($a == round(sqrt($b * $b + $c * $c)) || $b == round(sqrt($a * $a + $c * $c)) || $c == round(sqrt($b * $b + $a * $a)) ) {
+    if ($a == round(sqrt($b * $b + $c * $c)) ) {
+        $tipas = 'Status ';
+        $plotas = 'Plotas Lygus:' . ' ' . ($b * $c) / 2;
+    }
+
+    elseif ($b == round(sqrt($a * $a + $c * $c)) ) {
+        $tipas = 'Status ';
+        $plotas = 'Plotas Lygus:' . ' ' . ($a * $c) / 2;
+    }
+
+    elseif ($c == round(sqrt($a * $a + $b * $b)) ) {
         $tipas = 'Status ';
         $plotas = 'Plotas Lygus:' . ' ' . ($a * $b) / 2;
     }
     
-    else if ( $a != $b && $b != $c && $a != $c && $a + $b > $c ){
+    elseif ( $a != $b && $b != $c && $a != $c && $a + $b > $c ){
         $tipas = 'Įvairiakraštis ';
         $plotas = 'Plotas Lygus:' . ' ' . round(sqrt($perimetras * (($perimetras - $a) * ($perimetras - $b) * ($perimetras - $c))));    
     }
