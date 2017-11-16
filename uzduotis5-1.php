@@ -7,9 +7,9 @@
 </head>
 <body>
     <?php 
-    $a = 5;
+    $a = 2;
     $b = 5;
-    $c = 5;
+    $c = 1;
     $tipas;
     $plotas;
     $perimetras = ($a + $b + $c) / 2;
@@ -18,7 +18,7 @@
         $tipas = 'Status';
     }
     
-    else if ( $a != $b && $b != $c && $a != $c && $a + $b > $c ){
+    else if ( $a != $b && $b != $c && $a != $c && $a + $b > $c && $a + $c > $b && $b + $c > $a ){
         $tipas = 'Įvairiakraštis';
     }
     elseif ( $a == $b && $a == $c && $b == $c){
