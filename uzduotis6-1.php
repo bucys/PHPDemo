@@ -10,15 +10,21 @@
 <?php 
     $a = [5, 6, 10, 15];
     $b = [8, 5, 3, 25];
+    $lengthA = count($a);
+    $lengthB = count($b);
 
-    for ($i = 0; $i < count($a); $i++) {
+    for ($i = 0; $i < $lengthA; $i++) {
         $sumaA += $a[$i];
     }
-    for ($i = 0; $i < count($b); $i++) {
+    for ($i = 0; $i < $lengthB; $i++) {
         $sumaB += $b[$i];
     }
 
-    echo ($sumaA / count($a)) - ($sumaB / count($b));
+    $vidA = $sumaA / $lengthA;
+    $vidB = $sumaB / $lengthB;
+    $vid = $vidA - $vidB;
+
+    echo $vid;
 
 ?>
 </body>
