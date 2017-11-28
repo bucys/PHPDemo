@@ -45,8 +45,6 @@ $mokiniai = [
     new Mokinys('Petras', ['anglu' => [5, 8, 7], 'lietuviu' => [6, 9, 8], 'matematika' => [10, 10, 9, 9]])
 ];
 
-
-//ksort($mokiniai, 'vidurkis');
 for ($i = 0; $i < count($mokiniai) - 1; $i++) {
     
     $x = $mokiniai[$i];

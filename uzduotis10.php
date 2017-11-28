@@ -8,7 +8,8 @@
 
 date_default_timezone_set('EET');
 
-class Mokinys {
+class Mokinys 
+{
     public $vardas;
     public $gimData;
     public $pazymiai;
@@ -55,9 +56,6 @@ $mokiniai = [
     new Mokinys('Petras', '1998-12-01', ['anglu' => [5, 8, 7], 'lietuviu' => [7, 10, 8], 'matematika' => [10, 10, 9, 9]])
 ];
 
-//print_r($mokiniai);
-//exit;
-//ksort($mokiniai, 'vidurkis');
 for ($i = 0; $i < count($mokiniai) - 1; $i++) {
     
     $x = $mokiniai[$i];
